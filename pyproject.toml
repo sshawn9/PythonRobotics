@@ -1,0 +1,36 @@
+[project]
+name = "pythonrobotics"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "xxx", email = "xxx@xxx.com" }
+]
+dependencies = [
+    "numpy>=2.0.2",
+    "scipy>=1.13.1",
+    "matplotlib>=3.9.2",
+    "cvxpy>=1.5.3",
+    "pyside6>=6.7.2",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff>=0.6.7",
+    "mypy>=1.11.2",
+    "pytest>=8.3.3",
+    "pytest-xdist>=3.6.1",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pythonrobotics"]
